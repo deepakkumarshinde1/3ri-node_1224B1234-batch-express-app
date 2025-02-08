@@ -2,10 +2,26 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <fieldset>
+      <legend>User Login</legend>
+
+      <form action="/check-login" method="post">
+        <section>
+          <label for="">UserName</label>
+          <input type="text" placeholder="username" name="username" />
+        </section>
+        <section>
+          <label for="">Password</label>
+          <input type="password" placeholder="password" name="password" />
+        </section>
+        <section>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </section>
+      </form>
+    </fieldset>
   </body>
 </html>
